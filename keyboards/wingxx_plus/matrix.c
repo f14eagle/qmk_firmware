@@ -187,8 +187,9 @@ uint8_t matrix_scan(void)
     if (uart_data[10] == 0xE0)
     {
         //shifting and transferring the keystates to the QMK matrix variable
+        // 0x3C000 = pad mask
         for (uint8_t i = 0; i < MATRIX_ROWS; i++) {
-            matrix[i] = (uint16_t) uart_data[i*2] | (uint16_t) uart_data[i*2+1] << 7;
+            matrix[i] = (uint16_t) uart_data[i*2] | (uint16_t) uart_data[i*2+1] << 7 | (matrix[i] & 0x3C000);
         }
     }
 
