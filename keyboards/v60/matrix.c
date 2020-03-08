@@ -166,7 +166,7 @@ uint8_t matrix_scan(void)
     SERIAL_UART_DATA = 's';
 
     //trust the external keystates entirely, erase the last data
-    uint16_t uart_data[11] = {0};
+    uint8_t uart_data[11] = {0};
 
     //there are 14 bytes corresponding to 14 columns, and an end byte
     for (uint8_t i = 0; i < 11; i++) {
@@ -189,8 +189,7 @@ uint8_t matrix_scan(void)
         //shifting and transferring the keystates to the QMK matrix variable
         // 0x3C000 = pad mask
         for (uint8_t i = 0; i < MATRIX_ROWS; i++) {
-            matrix[i] = (uint16_t) uart_data[i*2] | (matrix[i] & 0x3C000);
-            // matrix[i] = (uint16_t) uart_data[i*2] | (uint16_t) uart_data[i*2+1] << 7 | (matrix[i] & 0x3C000);
+            matrix[i] = (uint16_t) uart_data[i*2] | (uint16_t) uart_data[i*2+1] << 7 | (matrix[i] & 0x3C000);
         }
     }
 
