@@ -20,6 +20,8 @@ enum custom_keycodes {
 
 %keymap%
 
+%macro%
+
 void matrix_scan_user(void) {
 
 };
