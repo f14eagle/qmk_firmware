@@ -70,7 +70,7 @@ UNICODE_ENABLE = YES 		# Unicode
 # BLUETOOTH_ENABLE = yes # Enable Bluetooth with the Adafruit EZ-Key HID
 # RGBLIGHT_ENABLE = yes
 # RGBLIGHT_SLEEP = yes
-VIA_ENABLE = yes
+# VIA_ENABLE = yes
 
 USB = /dev/ttyACM0
 
