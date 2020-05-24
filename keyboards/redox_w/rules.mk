@@ -55,11 +55,19 @@ OPT_DEFS += -DINTERRUPT_CONTROL_ENDPOINT
 # Build Options
 #   comment out to disable the options.
 #
+<<<<<<< HEAD
 #BOOTMAGIC_ENABLE = yes	# Virtual DIP switch configuration(+1000)
 #MOUSEKEY_ENABLE = yes	# Mouse keys(+4700)
 #EXTRAKEY_ENABLE = yes	# Audio control and System control(+450)
 #CONSOLE_ENABLE = yes	# Console for debug(+400)
 #COMMAND_ENABLE = yes   # Commands for debug and configuration
+=======
+#BOOTMAGIC_ENABLE = yes	# Virtual DIP switch configuration
+MOUSEKEY_ENABLE = yes	# Mouse keys
+EXTRAKEY_ENABLE = yes	# Audio control and System control
+CONSOLE_ENABLE = yes	# Console for debug
+COMMAND_ENABLE = yes   # Commands for debug and configuration
+>>>>>>> f66680d233d1abf61a38d3704a99941c62bfebbc
 CUSTOM_MATRIX = yes    # Remote matrix from the wireless bridge
 # Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
 # SLEEP_LED_ENABLE = yes  # Breathing sleep LED during USB suspend
