@@ -20,7 +20,7 @@
 #define MATRIX_COL_PINS { B0, B1, B2, B3, B4, B5, B6, B7, D0, D1, D2, D3, D4, D5 }
 
 #define RGB_DI_PIN D6
-#define RGBLED_NUM 14
+#define RGBLED_NUM 16
 #define DIODE_DIRECTION COL2ROW
 
 #define RGBLIGHT_ANIMATIONS
